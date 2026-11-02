@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The First Page DOM manipulation</title>
+</head>
+
+<body>
+  <button id="bottone">
+    PREMI QUI
+  </button>
+  <input type="text" id="testo-todo">
+
+  <div id="contenitore">
+
+  </div>
+
+
+
+  <script>
+    let btn = document.getElementById("bottone");
+    let input = document.getElementById("testo-todo");
+    let contenitoreSaluto = document.getElementById("contenitore");
+
+;
+
+    btn.addEventListener("click", () => {
+
+      let nuovoDiv = document.createElement("div");
+
+      nuovoDiv.textContent = input.value;
+      input.value ="";
+      contenitoreSaluto.appendChild(nuovoDiv);
+
+    });
+
+  </script>
+
+</body>
+
+</html>

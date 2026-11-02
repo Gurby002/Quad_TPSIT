@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The First Page DOM manipulation</title>
+  </head>
+  <body>
+    <button id="bottone">
+      PREMI QUI
+    </button>
+    <input type="text" id="testo-todo">
+    
+    <div id="contenitore">
+
+    </div>
+
+
+
+    <script>
+      let btn = document.getElementById("bottone");
+      let input = document.getElementById("testo-todo");
+      let contenitoreSaluto = document.getElementById("contenitore");
+
+      let saluti = ["hello, world!", "ciao mondo", "buna,lume", "preivt, sveit"];
+
+      btn.addEventListener("click", () =>{
+
+        let nuovoDiv= document.createElement("div");
+
+
+        let indiceCasuale = Math.floor(Math.random() * saluti.length);
+        nuovoDiv.textContent = saluti[indiceCasuale];
+        contenitoreSaluto.appendChild(nuovoDiv);
+
+      });
+
+    </script>
+    
+  </body>
+</html>
